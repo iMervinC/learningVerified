@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./Navbar.scss";
 import { MenuItems } from "./MenuItems";
 import { Link } from "react-router-dom";
+import logo from "../../img/logo.png";
 
 class Navbar extends Component {
   state = { clicked: false };
@@ -14,9 +15,7 @@ class Navbar extends Component {
     return (
       <nav className="NavbarItems">
         <Link className="navbar-logo" to="/">
-          <h1>
-            React <i className="fas fa-chess-rook"></i>
-          </h1>
+          <img src={logo} alt="logo" />
         </Link>
 
         <div className="menu-icon" onClick={this.handleClick}>
