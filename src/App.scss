@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+}
+html {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+// Colors Variables
+$zoomBlue: #348ffc;
+$zoomLight: #83bbff;
+$zoomDark: #0c0e96;
+
+$textColor1: #ffff;
+$textColor2: #0000;
+
+.lightBlueBg {
+  background-color: $zoomLight;
+}
+
+.container {
+  width: 70vw;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  column-gap: 50px;
+  justify-content: center;
+  flex-flow: wrap;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin for-phone {
+  @media (max-width: 850px) {
+    @content;
+  }
+}
+@mixin for-tablet {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+@mixin for-desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}

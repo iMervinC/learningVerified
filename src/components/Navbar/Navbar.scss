@@ -1,0 +1,126 @@
+@import "../../App.scss";
+
+.NavbarItems {
+  background: $zoomBlue;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+
+  @include for-phone {
+    position: relative;
+    font-size: 1.2rem;
+    height: 80px;
+  }
+}
+
+.navbar-logo {
+  color: $textColor1;
+  justify-self: start;
+  margin-left: 20px;
+  cursor: pointer;
+  text-decoration: none;
+
+  @include for-phone {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(25%, 50%);
+  }
+}
+
+.nav {
+  &-menu {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 20px;
+    list-style: none;
+    text-align: center;
+    width: 70vw;
+    justify-content: end;
+
+    @include for-phone {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+      position: absolute;
+      top: 80px;
+      left: -100%;
+      opacity: 1;
+      transition: all 0.5s ease;
+
+      &.active {
+        background: $zoomBlue;
+        left: 0;
+        opacity: 1;
+        transition: all 0.5 ease;
+        z-index: 1;
+      }
+    }
+  }
+
+  &-links {
+    text-decoration: none;
+    color: $textColor1;
+
+    &:hover {
+      color: $zoomDark;
+    }
+
+    @include for-phone {
+      text-align: center;
+      padding: 1rem;
+      width: 100%;
+      display: table;
+
+      &:hover {
+        color: $textColor1;
+        background: $zoomDark;
+        border-radius: 0;
+      }
+    }
+
+    &-mobile {
+      display: none;
+
+      @include for-phone {
+        display: block;
+        text-align: center;
+        padding: 1.5rem;
+        margin: 2rem auto;
+        border-radius: 4px;
+        width: 80%;
+        background: #4ad9e4;
+        text-decoration: none;
+        color: #ffff;
+        font-size: 1.5rem;
+      }
+
+      &:hover {
+        background: #fff;
+        color: #4ad9e4;
+        transition: 250ms;
+      }
+    }
+  }
+}
+
+.fa-bars {
+  color: #eee;
+}
+
+.menu-icon {
+  display: none;
+
+  @include for-phone {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+}

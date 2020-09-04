@@ -1,0 +1,27 @@
+@import "../../App.scss";
+
+.footer {
+  margin-top: auto;
+  background-color: $zoomDark;
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+
+  &-content {
+    color: $textColor1;
+  }
+  &-contact {
+    list-style-type: none;
+  }
+
+  &-row {
+    display: flex;
+    flex-direction: row;
+    column-gap: 50px;
+    justify-content: space-around;
+    flex-flow: wrap;
+  }
+}
