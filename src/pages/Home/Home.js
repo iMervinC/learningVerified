@@ -6,14 +6,10 @@ import Button from "../../components/Button";
 import { CoursesData } from "../../data/CoursesData";
 import { LecturersData } from "../../data/LecturersData";
 import { Link } from "react-router-dom";
-import { CartContext } from "../../context/CartContext";
+import { Context } from "../../context/CartContext";
 
 const Home = () => {
-  const [cart, setCart] = useContext(CartContext);
-
-  const addToCart = (course) => {
-    setCart([...cart, course]);
-  };
+  const { addToCart } = useContext(Context);
 
   return (
     <>
@@ -31,7 +27,7 @@ const Home = () => {
                 body={course.title}
                 footer={course.by}
                 imgLink={course.imgUrl}
-                onClick={() => addToCart()}
+                onClick={() => addToCart(course)}
               />
             );
           })}

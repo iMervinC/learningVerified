@@ -1,4 +1,5 @@
 import faker from "faker";
+import { v4 } from "uuid";
 
 export const CoursesData = [
   {
@@ -8,6 +9,7 @@ export const CoursesData = [
     imgUrl: `${faker.image.image()}`,
     price: 150,
     unit: 1,
+    id: v4(),
   },
   {
     title: 'Financial Dependency "The Invisible Weapon"',
@@ -15,6 +17,7 @@ export const CoursesData = [
     imgUrl: `${faker.image.image()}`,
     price: 200,
     unit: 1,
+    id: v4(),
   },
   {
     title: "Know your worth and then ask for it",
@@ -22,6 +25,7 @@ export const CoursesData = [
     imgUrl: `${faker.image.image()}`,
     price: 100,
     unit: 1,
+    id: v4(),
   },
   {
     title:
@@ -30,6 +34,7 @@ export const CoursesData = [
     imgUrl: `${faker.image.image()}`,
     price: 100,
     unit: 1,
+    id: v4(),
   },
   {
     title: "Place Holder Title",
@@ -37,6 +42,7 @@ export const CoursesData = [
     imgUrl: `${faker.image.image()}`,
     price: 100,
     unit: 1,
+    id: v4(),
   },
   {
     title: "Place Holder Title",
@@ -44,6 +50,7 @@ export const CoursesData = [
     imgUrl: `${faker.image.image()}`,
     price: 100,
     unit: 1,
+    id: v4(),
   },
   {
     title: "Place Holder Title",
@@ -51,6 +58,7 @@ export const CoursesData = [
     imgUrl: `${faker.image.image()}`,
     price: 100,
     unit: 1,
+    id: v4(),
   },
   {
     title: "Place Holder Title",
@@ -58,6 +66,7 @@ export const CoursesData = [
     imgUrl: `${faker.image.image()}`,
     price: 100,
     unit: 1,
+    id: v4(),
   },
   {
     title: "Place Holder Title",
@@ -65,6 +74,7 @@ export const CoursesData = [
     imgUrl: `${faker.image.image()}`,
     price: 100,
     unit: 1,
+    id: v4(),
   },
   {
     title: "Place Holder Title",
@@ -72,5 +82,6 @@ export const CoursesData = [
     imgUrl: `${faker.image.image()}`,
     price: 100,
     unit: 1,
+    id: v4(),
   },
 ];

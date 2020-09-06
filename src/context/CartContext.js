@@ -1,13 +1,30 @@
-import React, { useState, createContext } from "react";
+import createDataContex from "./createDataContex";
 
-export const CartContext = createContext();
-
-export const CartProvider = ({ children }) => {
-  const [cart, setCart] = useState([]);
-
-  return (
-    <CartContext.Provider value={[cart, setCart]}>
-      {children}
-    </CartContext.Provider>
-  );
+const reducer = (cart, action) => {
+  switch (action.type) {
+    case "add_ToCart":
+      return [...cart, action.payload];
+    case "remove_FromCart":
+      return cart.filter((course) => course.id !== action.payload);
+    default:
+      return cart;
+  }
 };
+
+const addToCart = (dispatch) => {
+  return (course) => {
+    dispatch({ type: "add_ToCart", payload: course });
+  };
+};
+
+const removeFromCart = (dispatch) => {
+  return (course) => {
+    dispatch({ type: "remove_FromCart", payload: course });
+  };
+};
+
+export const { Context, Provider } = createDataContex(
+  reducer,
+  { addToCart, removeFromCart },
+  []
+);

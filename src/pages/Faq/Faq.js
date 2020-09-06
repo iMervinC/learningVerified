@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { TextBanner } from "../../components/Banner";
-import { Card } from "../../components/Card/Card";
+import { FaqCard } from "../../components/Card/Card";
 
 class Faq extends Component {
   render() {
@@ -10,15 +10,10 @@ class Faq extends Component {
         <div className="margin-bottom"></div>
         <div className="container">
           <div className="row">
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+            <FaqCard />
+            <FaqCard />
+            <FaqCard />
+            <FaqCard />
           </div>
         </div>
       </div>

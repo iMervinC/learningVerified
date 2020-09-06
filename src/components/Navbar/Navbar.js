@@ -3,10 +3,13 @@ import "./Navbar.scss";
 import { MenuItems } from "./MenuItems";
 import { Link } from "react-router-dom";
 import logo from "../../img/logo.png";
-import { CartContext } from "../../context/CartContext";
+import { Context } from "../../context/CartContext";
 
 const Navbar = () => {
-  const [cart] = useContext(CartContext);
+  const cart = useContext(Context);
+
+  //console.log(cart.state.length);
+
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
 
@@ -33,7 +36,9 @@ const Navbar = () => {
         })}
         <li>
           <Link to="/cart">
-            <i className=" nav-links fas fa-shopping-cart"> {cart.length}</i>
+            <i className=" nav-links fas fa-shopping-cart">
+              {cart.state.length}
+            </i>
           </Link>
         </li>
       </ul>
