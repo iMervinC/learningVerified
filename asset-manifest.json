@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/learningVerified/static/css/main.2b1ada8d.chunk.css",
+    "main.js": "/learningVerified/static/js/main.8e6eec23.chunk.js",
+    "main.js.map": "/learningVerified/static/js/main.8e6eec23.chunk.js.map",
+    "runtime-main.js": "/learningVerified/static/js/runtime-main.41b93f6a.js",
+    "runtime-main.js.map": "/learningVerified/static/js/runtime-main.41b93f6a.js.map",
+    "static/js/2.16e8fa74.chunk.js": "/learningVerified/static/js/2.16e8fa74.chunk.js",
+    "static/js/2.16e8fa74.chunk.js.map": "/learningVerified/static/js/2.16e8fa74.chunk.js.map",
+    "index.html": "/learningVerified/index.html",
+    "precache-manifest.c3d4026a33eab9f79e7f9340762d3046.js": "/learningVerified/precache-manifest.c3d4026a33eab9f79e7f9340762d3046.js",
+    "service-worker.js": "/learningVerified/service-worker.js",
+    "static/css/main.2b1ada8d.chunk.css.map": "/learningVerified/static/css/main.2b1ada8d.chunk.css.map",
+    "static/js/2.16e8fa74.chunk.js.LICENSE.txt": "/learningVerified/static/js/2.16e8fa74.chunk.js.LICENSE.txt",
+    "static/media/logo.png": "/learningVerified/static/media/logo.ff30649b.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.41b93f6a.js",
+    "static/js/2.16e8fa74.chunk.js",
+    "static/css/main.2b1ada8d.chunk.css",
+    "static/js/main.8e6eec23.chunk.js"
+  ]
+}
