@@ -4,6 +4,7 @@ import { Context } from "../../context/CartContext";
 
 const Cart = () => {
   const cart = useContext(Context);
+  const { removeFromCart } = useContext(Context);
 
   console.log(cart.state);
   return (
@@ -22,6 +23,7 @@ const Cart = () => {
               body={course.title}
               footer={course.by}
               imgLink={course.imgUrl}
+              onClick={() => removeFromCart(course.id)}
               price={course.price}
               unit={course.unit}
             />
