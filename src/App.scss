@@ -25,14 +25,14 @@ $textColor2: #0000;
 }
 
 .container {
-  width: 70vw;
+  width: 90vw;
   margin: 0 auto;
 }
 
 .row {
   display: flex;
   flex-direction: row;
-  column-gap: 50px;
+  column-gap: 4rem;
   justify-content: center;
   flex-flow: wrap;
 }

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import Card from "../../components/Card/Card";
+import { Card } from "../../components/Card/Card";
 import { SmallBanner } from "../../components/Banner";
+import { LecturersData } from "../../data/LecturersData";
 
 class Lecturers extends Component {
   render() {
@@ -10,15 +11,16 @@ class Lecturers extends Component {
         <div className="margin-bottom"></div>
         <div className="container">
           <div className="row">
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+            {LecturersData.map((item, index) => {
+              return (
+                <Card
+                  key={index}
+                  body={item.name}
+                  footer={item.position}
+                  imgLink={item.imgUrl}
+                />
+              );
+            })}
           </div>
         </div>
       </div>

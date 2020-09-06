@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Home.scss";
 import { Banner } from "../../components/Banner";
-import Card from "../../components/Card/Card";
+import { Card, LecturerCard } from "../../components/Card/Card";
 import Button from "../../components/Button";
+import { CoursesData } from "../../data/CoursesData";
+import { LecturersData } from "../../data/LecturersData";
+import { Link } from "react-router-dom";
+import { CartContext } from "../../context/CartContext";
 
 const Home = () => {
+  const [cart, setCart] = useContext(CartContext);
+
+  const addToCart = (course) => {
+    setCart([...cart, course]);
+  };
+
   return (
     <>
       <Banner
@@ -14,23 +24,40 @@ const Home = () => {
       <div className="container">
         <h3 className="label ">Courses</h3>
         <div className="row">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          {CoursesData.slice(0, 4).map((course, index) => {
+            return (
+              <Card
+                key={index}
+                body={course.title}
+                footer={course.by}
+                imgLink={course.imgUrl}
+                onClick={() => addToCart()}
+              />
+            );
+          })}
         </div>
         <div className="center">
-          <Button>See More</Button>
+          <Link to="/courses">
+            <Button>See More</Button>
+          </Link>
         </div>
         <h3 className="label ">Lecturers</h3>
         <div className="row ">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          {LecturersData.slice(0, 4).map((item, index) => {
+            return (
+              <LecturerCard
+                key={index}
+                body={item.name}
+                footer={item.position}
+                imgLink={item.imgUrl}
+              />
+            );
+          })}
         </div>
         <div className="center margin-bottom">
-          <Button>See More</Button>
+          <Link to="/lecturers">
+            <Button>See More</Button>
+          </Link>
         </div>
       </div>
     </>

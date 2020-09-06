@@ -14,10 +14,10 @@ const Footer = () => {
             <ul className="footer-contact">
               <li>Contact Us</li>
               <li>
-                <i class="fas fa-envelope"></i> +63 917 840 8989
+                <i className="fas fa-envelope"></i> +63 917 840 8989
               </li>
               <li>
-                <i class="fas fa-phone"></i> LearningVerified@gmail.com
+                <i className="fas fa-phone"></i> LearningVerified@gmail.com
               </li>
             </ul>
           </div>

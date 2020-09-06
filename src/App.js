@@ -7,18 +7,24 @@ import Lecturers from "./pages/Lecturers/Lecturers";
 import Faq from "./pages/Faq/Faq";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
+import ScrollToTop from "react-router-scroll-top";
+import { CartProvider } from "./context/CartContext";
 
 function App() {
   return (
     <Router>
-      <Navbar />
-      <Switch>
-        <Route path="/courses" component={Courses} />
-        <Route path="/lecturers" component={Lecturers} />
-        <Route path="/faq" component={Faq} />
-        <Route path="/" component={Home} />
-      </Switch>
-      <Footer />
+      <ScrollToTop>
+        <CartProvider>
+          <Navbar />
+          <Switch>
+            <Route path="/courses" component={Courses} />
+            <Route path="/lecturers" component={Lecturers} />
+            <Route path="/faq" component={Faq} />
+            <Route path="/" component={Home} />
+          </Switch>
+          <Footer />
+        </CartProvider>
+      </ScrollToTop>
     </Router>
   );
 }

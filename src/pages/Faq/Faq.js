@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { TextBanner } from "../../components/Banner";
-import Card from "../../components/Card/Card";
+import { Card } from "../../components/Card/Card";
 
 class Faq extends Component {
   render() {
